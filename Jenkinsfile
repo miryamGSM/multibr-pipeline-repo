@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh 'echo %GIT_COMMIT%'
+        echo %GIT_COMMIT%
       }
     }
     stage('Test') {
