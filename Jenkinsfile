@@ -4,12 +4,12 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        echo %GIT_COMMIT%
       }
     }
     stage('Test') {
       steps {
         echo 'Testing..'
+        sh 'echo %GIT_COMMIT%'
       }
     }
     stage('Deploy') {
