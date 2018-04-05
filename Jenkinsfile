@@ -1,21 +1,21 @@
 pipeline {
-   agent any
-
-   stages {
-      stage('Build') {
-        steps {
-            echo 'Building..'
-        }
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building..'
+        sh 'echo %GIT_COMMIT%'
+      }
     }
     stage('Test') {
-        steps {
-            echo 'Testing..'
-        }
+      steps {
+        echo 'Testing..'
+      }
     }
     stage('Deploy') {
-        steps {
-            echo 'Deploying....'
-        }
-     }
+      steps {
+        echo 'Deploying....'
+      }
+    }
   }
 }
